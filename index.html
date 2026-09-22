@@ -25,6 +25,559 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="nav-right">
+                <button class="fav-btn">
+                    ❤️<span>My Favourites</span>
+                </button>
+                <button class="search-icon">🔎
+                </button>
+            </div>
         </header>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="script">
+                    Welcome to Sri Lanka</p>
+                    <h1> Discover the Beauty of <br> <span>Sri Lanka</span></h1>
+                    <p class="hero-text">From misty mountains to golden beaches,ancient cities to <br> wildlife adventure - Sri Lanka has it all</p>
+                    <a href="#places" class="main-btn">Explore Places <span>➡️</span></a>
+            </div>
+            <div class="hero-tag">
+                <div>❤️</div>
+                <p>
+                    Small Island
+                    <br>
+                    <strong> Big Magic</strong>
+                </p>
+            </div>
+            <div class="search-box">
+                <div class="search-field">
+                    <span>🔎</span>
+                    <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for Places..">
+                </div>
+                <select id="categorySelect">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="mountains">
+                    Mountains
+                </option>
+
+                <option value="beaches">
+                    Beaches
+                </option>
+
+                <option value="historical">
+                    Historical Places
+                </option>
+
+                <option value="nature">
+                    Waterfalls & Nature
+                </option>
+
+                <option value="wildlife">
+                    Wildlife
+                </option>
+
+                <option value="cultural">
+                    Cultural Places
+                </option>
+            </select>
+            <button id="searchBtn">
+                Search
+            </button>
+            </div>
+        </section>
+        <section class="categories" id="categories">
+
+        <div class="section-script">
+            Explore by Category
+        </div>
+
+
+        <div class="category-grid">
+
+            <button
+                class="category-card green"
+                data-category="mountains">
+
+                <span>⛰</span>
+
+                Mountains
+
+            </button>
+
+
+            <button
+                class="category-card blue"
+                data-category="beaches">
+
+                <span>☀</span>
+
+                Beaches
+
+            </button>
+
+
+            <button
+                class="category-card orange"
+                data-category="historical">
+
+                <span>🏛</span>
+
+                Historical Places
+
+            </button>
+
+
+            <button
+                class="category-card cyan"
+                data-category="nature">
+
+                <span>▥</span>
+
+                Waterfalls & Nature
+
+            </button>
+
+
+            <button
+                class="category-card purple"
+                data-category="wildlife">
+
+                <span>🐘</span>
+
+                Wildlife
+
+            </button>
+
+
+            <button
+                class="category-card pink"
+                data-category="cultural">
+
+                <span>♟</span>
+
+                Cultural Places
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= POPULAR PLACES ================= -->
+
+    <section class="places" id="places">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Popular Places
+                </h2>
+
+                <p>
+                    Discover some of the most loved destinations in Sri Lanka
+                </p>
+
+            </div>
+
+
+            <a href="#">
+                View All →
+            </a>
+
+        </div>
+
+
+
+        <div class="place-grid" id="placeGrid">
+
+
+            <!-- Ella -->
+
+            <article
+                class="place-card"
+                data-category="mountains"
+                data-name="Ella">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+                    alt="Ella">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Ella
+                    </h3>
+
+                    <p>
+                        Badulla
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Sigiriya -->
+
+            <article
+                class="place-card"
+                data-category="historical"
+                data-name="Sigiriya">
+
+                <img
+                    src="https://images.unsplash.com/photo-1586613831229-0f3d4b6a7f42?auto=format&fit=crop&w=900&q=80"
+                    alt="Sigiriya">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Sigiriya
+                    </h3>
+
+                    <p>
+                        Matale
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Nuwara Eliya -->
+
+            <article
+                class="place-card"
+                data-category="mountains"
+                data-name="Nuwara Eliya">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=80"
+                    alt="Nuwara Eliya">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Nuwara Eliya
+                    </h3>
+
+                    <p>
+                        Nuwara Eliya
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Mirissa -->
+
+            <article
+                class="place-card"
+                data-category="beaches"
+                data-name="Mirissa">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                    alt="Mirissa">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Mirissa
+                    </h3>
+
+                    <p>
+                        Matara
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Galle -->
+
+            <article
+                class="place-card"
+                data-category="beaches"
+                data-name="Galle">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80"
+                    alt="Galle">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Galle
+                    </h3>
+
+                    <p>
+                        Galle
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Yala -->
+
+            <article
+                class="place-card"
+                data-category="wildlife"
+                data-name="Yala">
+
+                <img
+                    src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=80"
+                    alt="Yala">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <div class="place-info">
+
+                    <h3>
+                        📍 Yala
+                    </h3>
+
+                    <p>
+                        Hambantota
+                    </p>
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PLAN YOUR TRIP ================= -->
+
+    <section class="planning" id="tips">
+
+        <div class="planning-text">
+
+            <p class="section-script">
+                Plan Your Trip
+            </p>
+
+            <h2>
+                Make Your Sri Lanka Journey
+                <br>
+                Unforgettable
+            </h2>
+
+            <p>
+                Get travel tips, local insights and personalized
+                <br>
+                itineraries for the perfect trip.
+            </p>
+
+            <button class="main-btn">
+                Start Planning
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+
+        <div class="tips-grid">
+
+            <div>
+
+                <span>☀</span>
+
+                <b>
+                    Best Time to Visit
+                </b>
+
+                <p>
+                    Find the ideal season
+                    <br>
+                    for your trip
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>♙</span>
+
+                <b>
+                    Travel Tips
+                </b>
+
+                <p>
+                    Useful tips for a
+                    <br>
+                    hassle-free journey
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>♧</span>
+
+                <b>
+                    Local Experiences
+                </b>
+
+                <p>
+                    Enjoy authentic
+                    <br>
+                    Sri Lankan culture
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>♡</span>
+
+                <b>
+                    Safe & Comfortable
+                </b>
+
+                <p>
+                    Travel with peace
+                    <br>
+                    of mind
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <p class="section-script">
+            About LankaLuxe
+        </p>
+
+        <h2>
+            Discover Sri Lanka Your Way
+        </h2>
+
+        <p>
+            LankaLuxe is a simple travel guide designed to help
+            travelers discover beautiful places, experiences and
+            hidden gems across Sri Lanka.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div>
+
+            <strong>
+                LankaLuxe
+            </strong>
+
+            <p>
+                Explore Sri Lanka, one beautiful place at a time.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 LankaLuxe. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
     </body>
 </html>
