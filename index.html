@@ -1,98 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"content="width=device-width,initial-scal=1.0">
-        <title>LankaLuxe | Explore Sri Lanka</title>
-        <link rel="preconnect" href="http://fonts.googleapis.com">
-        <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header class="navbar">
-            <a href="#" class="logo">
-                <span>🌴</span>
-                <div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LankaLuxe | Explore Sri Lanka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header home-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand" aria-label="LankaLuxe home">
+                <span class="brand-mark">🌴</span>
+                <div class="brand-copy">
                     <strong>LankaLuxe</strong>
                     <small>EXPLORE SRI LANKA</small>
                 </div>
             </a>
-            <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#places">Places</a>
-                <a href="#categories">Categories</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="places.html">Places</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="travel_tips.html">Travel Tips</a>
+                <a href="contact.html">Contact</a>
             </nav>
-            <div class="nav-right">
-                <button class="fav-btn">
-                    ❤️<span>My Favourites</span>
-                </button>
-                <button class="search-icon">🔎
-                </button>
+
+            <div class="nav-actions">
+                <button class="nav-fav" type="button">❤ <span>My Favourites</span></button>
+                <button class="nav-search" type="button" aria-label="Search">⌕</button>
             </div>
-        </header>
+        </div>
+    </header>
+
+    <main>
         <section class="hero">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <p class="script">
-                    Welcome to Sri Lanka</p>
-                    <h1> Discover the Beauty of <br> <span>Sri Lanka</span></h1>
-                    <p class="hero-text">From misty mountains to golden beaches,ancient cities to <br> wildlife adventure - Sri Lanka has it all</p>
-                    <a href="#places" class="main-btn">Explore Places <span>➡️</span></a>
-            </div>
-            <div class="hero-tag">
-                <div>❤️</div>
-                <p>
-                    Small Island
-                    <br>
-                    <strong> Big Magic</strong>
-                </p>
-            </div>
-            <div class="search-box">
-                <div class="search-field">
-                    <span>🔎</span>
-                    <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search for Places..">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <p class="script">Welcome to Sri Lanka</p>
+                    <h1>Discover the Beauty of <span>Sri Lanka</span></h1>
+                    <p class="hero-text">From misty mountains to golden beaches, ancient cities to wildlife adventures — Sri Lanka has it all.</p>
+                    <a href="#places" class="primary-btn">Explore Places <span>→</span></a>
                 </div>
-                <select id="categorySelect">
 
-                <option value="all">
-                    All Categories
-                </option>
+                <div class="hero-tag">
+                    <div>❤</div>
+                    <p>Small Island<br><strong>Big Magic</strong></p>
+                </div>
 
-                <option value="mountains">
-                    Mountains
-                </option>
-
-                <option value="beaches">
-                    Beaches
-                </option>
-
-                <option value="historical">
-                    Historical Places
-                </option>
-
-                <option value="nature">
-                    Waterfalls & Nature
-                </option>
-
-                <option value="wildlife">
-                    Wildlife
-                </option>
-
-                <option value="cultural">
-                    Cultural Places
-                </option>
-            </select>
-            <button id="searchBtn">
-                Search
-            </button>
+                <div class="search-box" aria-label="Search destinations">
+                    <div class="search-field">
+                        <span>⌕</span>
+                        <input type="text" id="searchInput" placeholder="Search for places...">
+                    </div>
+                    <select id="categorySelect">
+                        <option value="all">All Categories</option>
+                        <option value="mountains">Mountains</option>
+                        <option value="beaches">Beaches</option>
+                        <option value="historical">Historical Places</option>
+                        <option value="nature">Waterfalls & Nature</option>
+                        <option value="wildlife">Wildlife</option>
+                        <option value="cultural">Cultural Places</option>
+                    </select>
+                    <button id="searchBtn" type="button">Search</button>
+                </div>
             </div>
         </section>
-        
-    </body>
+
+        <section class="categories-bar">
+            <div class="container categories-row">
+                <p class="section-script">Begin your journey</p>
+                <div class="category-grid">
+                    <button class="category-card green" type="button" data-category="mountains">
+                        <span>⛰</span>
+                        Mountains
+                    </button>
+                    <button class="category-card blue" type="button" data-category="beaches">
+                        <span>🏖</span>
+                        Beaches
+                    </button>
+                    <button class="category-card orange" type="button" data-category="historical">
+                        <span>🏛</span>
+                        Heritage
+                    </button>
+                    <button class="category-card cyan" type="button" data-category="nature">
+                        <span>🌿</span>
+                        Nature
+                    </button>
+                    <button class="category-card purple" type="button" data-category="wildlife">
+                        <span>🦁</span>
+                        Wildlife
+                    </button>
+                    <button class="category-card pink" type="button" data-category="cultural">
+                        <span>🎭</span>
+                        Culture
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular section-shell" id="places">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Curated for curious travellers</p>
+                        <h2>Popular places</h2>
+                    </div>
+                    <a href="places.html">View all destinations</a>
+                </div>
+
+                <div class="place-grid">
+                    <article class="place-card" data-category="historical" data-name="sigiriya ancient rock fortress">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Sigiriya rock fortress">
+                        <button class="heart" type="button" aria-label="Save Sigiriya">♡</button>
+                        <div class="place-info">
+                            <h3>Sigiriya</h3>
+                            <p>Central Province</p>
+                        </div>
+                    </article>
+
+                    <article class="place-card" data-category="nature" data-name="ella">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Ella">
+                        <button class="heart" type="button" aria-label="Save Ella">♡</button>
+                        <div class="place-info">
+                            <h3>Ella</h3>
+                            <p>Uva Province</p>
+                        </div>
+                    </article>
+
+                    <article class="place-card" data-category="beaches" data-name="mirissa beach">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Mirissa beach">
+                        <button class="heart" type="button" aria-label="Save Mirissa">♡</button>
+                        <div class="place-info">
+                            <h3>Mirissa</h3>
+                            <p>Southern Coast</p>
+                        </div>
+                    </article>
+
+                    <article class="place-card" data-category="wildlife" data-name="yala national park">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80" alt="Yala National Park">
+                        <button class="heart" type="button" aria-label="Save Yala">♡</button>
+                        <div class="place-info">
+                            <h3>Yala</h3>
+                            <p>Wildlife</p>
+                        </div>
+                    </article>
+
+                    <article class="place-card" data-category="cultural" data-name="kandy temple of the tooth">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=80" alt="Temple of the Tooth in Kandy">
+                        <button class="heart" type="button" aria-label="Save Kandy">♡</button>
+                        <div class="place-info">
+                            <h3>Kandy</h3>
+                            <p>Culture & Heritage</p>
+                        </div>
+                    </article>
+
+                    <article class="place-card" data-category="nature" data-name="adams peak">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Adams Peak">
+                        <button class="heart" type="button" aria-label="Save Adams Peak">♡</button>
+                        <div class="place-info">
+                            <h3>Adams Peak</h3>
+                            <p>Mountain trails</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="planning section-shell">
+            <div class="container planning-wrap">
+                <div class="planning-copy">
+                    <p class="section-script">Plan with confidence</p>
+                    <h2>Your perfect Sri Lankan getaway, almost built for you.</h2>
+                    <p>From hidden waterfalls to luxury escapes, let us guide your journey with practical itineraries and local insight.</p>
+                </div>
+
+                <div class="tips-grid">
+                    <div>
+                        <span>🏝</span>
+                        <b>Beach escapes</b>
+                        <p>Sun-drenched coasts and mellow surf towns.</p>
+                    </div>
+                    <div>
+                        <span>🌄</span>
+                        <b>Mountain trails</b>
+                        <p>Misty viewpoints and tea-country routes.</p>
+                    </div>
+                    <div>
+                        <span>🧭</span>
+                        <b>Smart routes</b>
+                        <p>Efficient itineraries for every travel style.</p>
+                    </div>
+                    <div>
+                        <span>🧳</span>
+                        <b>Local tips</b>
+                        <p>Convenient advice for transport and etiquette.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section-shell" id="about">
+            <div class="container narrow">
+                <p class="section-script">About LankaLuxe</p>
+                <h2>More than a trip — a story of discovery</h2>
+                <p>We blend heritage, nature and modern comfort to help travellers experience the soul of Sri Lanka with clarity, warmth and wonder.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <div>
+                <strong>LankaLuxe</strong>
+                <p>Curating unforgettable journeys across Sri Lanka.</p>
+            </div>
+            <div>
+                <p>hello@lankaluxe.com</p>
+                <p>+94 11 234 5678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

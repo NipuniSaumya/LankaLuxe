@@ -1,263 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>LankaLuxe | Destinations</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="places.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header class="navbar">
-
-        <a href="index.html" class="logo">
-
-            <div class="logo-mark">🌴</div>
-
-            <div>
-                <h2>LankaLuxe</h2>
-                <span>EXPLORE SRI LANKA</span>
-            </div>
-
-        </a>
-
-
-        <nav>
-
-            <a href="index.html">Home</a>
-
-            <a href="places.html" class="active">
-                Places
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand" aria-label="LankaLuxe home">
+                <span class="brand-mark">🌴</span>
+                <div class="brand-copy">
+                    <strong>LankaLuxe</strong>
+                    <small>EXPLORE SRI LANKA</small>
+                </div>
             </a>
 
-            <a href="#">Categories</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="places.html" class="active">Places</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="travel_tips.html">Travel Tips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-            <a href="#">About</a>
-
-            <a href="#">Travel Tips</a>
-
-            <a href="#">Contact</a>
-
-        </nav>
-
-
-        <div class="nav-actions">
-
-            <button class="nav-search">
-                ⌕
-            </button>
-
-            <button class="nav-heart">
-                ♡
-            </button>
-
-            <button class="plan-btn">
-                Plan Trip
-            </button>
-
-            <button class="profile">
-                ●
-            </button>
-
+            <div class="nav-actions">
+                <button class="nav-fav" type="button">❤ <span>My Favourites</span></button>
+                <button class="nav-search" type="button" aria-label="Search">⌕</button>
+            </div>
         </div>
-
     </header>
-    <section class="destination-hero">
 
-        <div class="hero-content">
+    <section class="page-hero">
+        <div class="container">
+            <p class="eyebrow">✦ Wonder of Ceylon ✦</p>
+            <h1>Explore Sri Lanka’s iconic destinations</h1>
+            <p>From mist-shrouded tea highlands and ancient citadels to golden coastlines and untamed wilderness, every corner of Sri Lanka tells a different story.</p>
 
-            <div class="eyebrow">
-                ✦ WONDER OF CEYLON ✦
-            </div>
-
-            <h1>
-                Explore Sri Lanka's Iconic
-                <br>
-                Destinations
-            </h1>
-
-            <p>
-                From mist-shrouded emerald tea highlands and ancient citadels to
-                <br>
-                golden palm-fringed coastlines and untamed leopard sanctuaries.
-            </p>
-
-        </div>
-
-
-        <!-- SEARCH PANEL -->
-
-        <div class="filter-panel">
-
-            <div class="search-input">
-
-                <span>⌕</span>
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search places, districts, or landmarks..."
-                >
-
-            </div>
-
-
-            <select id="districtSelect">
-
-                <option value="all">
-                    ◉ All Districts (Island-wide)
-                </option>
-
-                <option value="central">
-                    Central Province
-                </option>
-
-                <option value="southern">
-                    Southern Province
-                </option>
-
-                <option value="uva">
-                    Uva Province
-                </option>
-
-                <option value="north">
-                    Northern Province
-                </option>
-
-            </select>
-
-
-            <select id="sortSelect">
-
-                <option value="popular">
-                    ⇅ Sort: Most Popular
-                </option>
-
-                <option value="name">
-                    Sort: Name
-                </option>
-
-            </select>
-
-
-            <div class="category-filter">
-
-                <button class="filter active" data-category="all">
-                    All Places
-                </button>
-
-                <button class="filter" data-category="mountains">
-                    Mountains
-                </button>
-
-                <button class="filter" data-category="beaches">
-                    Beaches
-                </button>
-
-                <button class="filter" data-category="historical">
-                    Historical Places
-                </button>
-
-                <button class="filter" data-category="nature">
-                    Waterfalls & Nature
-                </button>
-
-                <button class="filter" data-category="wildlife">
-                    Wildlife
-                </button>
-
-                <button class="filter" data-category="cultural">
-                    Cultural Places
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
- <main class="main-content">
-
-        <div class="title-row">
-
-            <div>
-
-                <h2>
-                    Iconic Sanctuaries & Landmarks
-                </h2>
-
-                <p>
-                    Hand-picked journeys woven into unforgettable experiences and serene encounters.
-                </p>
-
-            </div>
-
-            <span>
-                ◉ Curated 2025 Edition
-            </span>
-
-        </div>
-
-
-        <div class="places-grid" id="placesGrid">
-
-
-            <!-- 1 SIGIRIYA -->
-
-            <article
-                class="destination-card"
-                data-category="historical"
-                data-district="central"
-                data-name="Sigiriya Ancient Rock Fortress">
-
-                <div class="image-wrapper">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1586613831229-0f3d4b6a7f42?auto=format&fit=crop&w=800&q=85"
-                        alt="Sigiriya">
-
-                    <span class="tag">
-                        Historical Place
-                    </span>
-
-                    <button class="favorite">
-                        ♡
-                    </button>
-
-                    <span class="image-label">
-                        UNESCO WORLD HERITAGE
-                    </span>
-
+            <div class="filter-panel">
+                <div class="filter-row">
+                    <input type="text" id="searchInput" placeholder="Search places, districts, or landmarks...">
+                    <select id="districtSelect">
+                        <option value="all">All districts</option>
+                        <option value="central">Central Province</option>
+                        <option value="southern">Southern Province</option>
+                        <option value="uva">Uva Province</option>
+                        <option value="north">Northern Province</option>
+                    </select>
+                    <select id="sortSelect">
+                        <option value="popular">Sort: Most popular</option>
+                        <option value="name">Sort: Name</option>
+                    </select>
                 </div>
 
+                <div class="category-filters">
+                    <button class="filter-button active" type="button" data-category="all">All places</button>
+                    <button class="filter-button" type="button" data-category="mountains">Mountains</button>
+                    <button class="filter-button" type="button" data-category="beaches">Beaches</button>
+                    <button class="filter-button" type="button" data-category="historical">Historical</button>
+                    <button class="filter-button" type="button" data-category="nature">Nature</button>
+                    <button class="filter-button" type="button" data-category="wildlife">Wildlife</button>
+                    <button class="filter-button" type="button" data-category="cultural">Cultural</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="card-body">
-
-                    <small>
-                        📍 Matale, Central Province
-                    </small>
-
-                    <div class="card-title">
-
-                        <h3>
-                            Sigiriya - Ancient Rock Fortress
-                        </h3>
-
-                        <span class="rating">
-                            ★ 4.9 (1.1k)
-                        </span>
-
+    <main class="page-shell">
+        <section class="page-section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Curated 2025 edition</p>
+                        <h2>Iconic sanctuaries & landmarks</h2>
                     </div>
+                    <a href="index.html">Back to home</a>
+                </div>
 
-                    <p>
+                <div class="destination-grid" id="placesGrid">
+                    <article class="destination-card" data-category="historical" data-district="central" data-name="Sigiriya Ancient Rock Fortress">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Sigiriya">
+                            <span class="destination-tag">Historical place</span>
+                            <button class="favorite-button" type="button" aria-label="Save Sigiriya">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Matale, Central Province</small>
+                            <h3>Sigiriya</h3>
+                            <div class="destination-meta"><span>★ 4.9</span><span>1.1k reviews</span></div>
+                            <p>Ancient rock fortress and UNESCO heritage site with panoramic views and rich royal history.</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-card" data-category="beaches" data-district="southern" data-name="Mirissa Beach">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Mirissa Beach">
+                            <span class="destination-tag">Beach escape</span>
+                            <button class="favorite-button" type="button" aria-label="Save Mirissa">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Matara, Southern Province</small>
+                            <h3>Mirissa</h3>
+                            <div class="destination-meta"><span>★ 4.8</span><span>980 reviews</span></div>
+                            <p>Golden sands, surf-ready waves, and sunset dinners for a laid-back coastal escape.</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-card" data-category="nature" data-district="uva" data-name="Ella Scenic Trails">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Ella">
+                            <span class="destination-tag">Mountain views</span>
+                            <button class="favorite-button" type="button" aria-label="Save Ella">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Badulla, Uva Province</small>
+                            <h3>Ella</h3>
+                            <div class="destination-meta"><span>★ 4.9</span><span>870 reviews</span></div>
+                            <p>Cliffside tea estates, waterfalls, and memorable train rides through lush valleys.</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-card" data-category="wildlife" data-district="south" data-name="Yala National Park">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80" alt="Yala National Park">
+                            <span class="destination-tag">Wildlife</span>
+                            <button class="favorite-button" type="button" aria-label="Save Yala">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Hambantota, Southern Province</small>
+                            <h3>Yala</h3>
+                            <div class="destination-meta"><span>★ 4.7</span><span>630 reviews</span></div>
+                            <p>Safari adventures where leopards, elephants, and vibrant birds roam the dry plains.</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-card" data-category="cultural" data-district="central" data-name="Kandy Temple of the Tooth">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=80" alt="Temple of the Tooth">
+                            <span class="destination-tag">Cultural heritage</span>
+                            <button class="favorite-button" type="button" aria-label="Save Kandy">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Kandy, Central Province</small>
+                            <h3>Kandy</h3>
+                            <div class="destination-meta"><span>★ 4.9</span><span>1.4k reviews</span></div>
+                            <p>Sacred temples, colonial charm, and luminous evenings around the lake district.</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-card" data-category="mountains" data-district="central" data-name="Nuwara Eliya Highlands">
+                        <div class="destination-thumb">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Nuwara Eliya">
+                            <span class="destination-tag">Hill country</span>
+                            <button class="favorite-button" type="button" aria-label="Save Nuwara Eliya">♡</button>
+                        </div>
+                        <div class="destination-body">
+                            <small>📍 Nuwara Eliya, Central Province</small>
+                            <h3>Nuwara Eliya</h3>
+                            <div class="destination-meta"><span>★ 4.8</span><span>540 reviews</span></div>
+                            <p>Cool climates, tea fields, and a polished colonial atmosphere in the highlands.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <div>
+                <strong>LankaLuxe</strong>
+                <p>Curating unforgettable journeys across Sri Lanka.</p>
+            </div>
+            <div>
+                <p>hello@lankaluxe.com</p>
+                <p>+94 11 234 5678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
                         Marvel at King Kashyapa's 5th-century cliff palace,
                         landscaped gardens and ancient art.
                     </p>
@@ -633,7 +563,7 @@
                 </div>
 
             </article>
-
+            
 
 
 
